@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{% block title %}{% endblock %}</title>
+
+    {% block extracss %}{% endblock %}
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.
+	5/js/bootstrap.min.js"></script>
+	<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+</head>
+<style type="text/css">
+    #row1 {
+        height: 80px;
+        background-color: #8fBc8f;
+    }
+
+    #row3 {
+        height: 400px;
+        background-color: #8fBc8f;
+    }
+
+    #row1 ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    #row1 ul li {
+        display: inline-block;
+        line-height: 80px;
+    }
+
+    #row1 ul .item1 {
+        padding-left: 20px;
+        font-size: 40px;
+        font-weight: bold;
+        color: #ffffff;
+    }
+
+    #row1 ul .item2 a, #row1 ul .item3 a {
+        padding-left: 40px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    #row1 ul span {
+        line-height: 80px;
+        float: right;
+        padding-right: 20px;
+        font-size: 40px;
+        color: #ffffff;
+    }
+
+    #row3 .col-md-9 h2, #row3 .col-md-3 h2 {
+        padding-top: 80px;
+        font-size: 40px;
+        font-weight: 40px;
+        color: #ffffff;
+        text-align: center;
+    }
+
+    #row3 .col-md-9 p {
+        padding-top: 10px;
+        font-size: 20px;
+        font-weight: 40px;
+        color: #ffffff;
+        text-align: center;
+    }
+
+    #row3 .col-md-3 ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    #row3 .col-md-3 ul li {
+        padding-left: 60px;
+    }
+
+    #row3 .col-md-3 ul li img {
+        width: 50%;
+        height: 50%;
+    }
+</style>
+<body>
+	<div class="container-fluid">
+		<div class="row-fluid" id="row1">
+			<ul>
+				<li class="item1">
+					Summy's Blog
+				</li>
+				<li class="item2">
+					<a href="">About Me</a>
+				</li>
+				<li class="item3">
+					<a href="">For share</a>
+				</li>
+				<a href="#"><span class="glyphicon glyphicon-list"></span></a>
+			</ul>
+		</div>
+		<div class="row-fluid" id="row2">
+            {% block body %}{% endblock %}
+        </div>
+        <div class="row-fluid" id="row3">
+			<div class="col-md-9">
+				<h2>一直在路上，何畏远方</h2>
+				<hr/>
+				<p>百川东到海，何日复西归？</p>
+				<p>少壮不努力，老大徒伤悲。</p>
+			</div>
+			<div class="col-md-3">
+				<h2>Contact Me</h2>
+				<hr/>
+				<ul>
+					<li class="item1">
+						<!--<a href="#"><img src=""></a>-->
+					</li>
+					<li class="item2">
+						<!--<a href="#"><img src=""></a>-->
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

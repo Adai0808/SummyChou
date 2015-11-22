@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}Summy's Blog{% endblock %}
+
+{% block extracss %}
+<link href="{% static 'css/index.css' %}" rel="stylesheet" />
+{% endblock %}
+
+{% block body %}
+<div class="col-md-9">
+    <div class="content-block effect">
+        <div class="panel panel-default">
+           <div class="panel-heading">
+                <span class="glyphicon glyphicon-calendar"></span>
+                <font style="font-weight:bold;color:#454545">2015-11-22 22:00:43</font>
+           </div>
+           <div class="panel-body">
+                <div class="alert alert-success" role="alert"><font style="font-weight:bold;color:#454545">转载本博客文章必须也遵循署名-非商业用途-保持一致的创作共用协议</font></div>
+                <h2>
+                    在Linux系统中翻墙
+                </h2>
+                <p >这个世界上最强大的浏览器并不敢说是Google Chrome，但是最强大的搜索引擎非谷歌搜索莫属。一大群天才工程师花费了无数的人力、物力、财力设计了这个伟大的搜索引擎，然后我们的天朝政府轻轻松松就把它给墙了。作为普通平民，我们无权利评价政府的政策，但是我们有能力翻墙啊！别跟我说你不知道翻强是什么鬼！！！本文将给你推荐一款强大的翻墙应用--Shadowsocks，并介绍Linux平台的配置过程。（笔者是Linux死忠，无视Windowns，也用不起MacOS）
+                </p>
+                <div class="alert alert-success" role="alert"><font style="font-weight:bold;color:#454545">Shadowsocks适用于Windows、MacOS、Linux等多个操作系统和多款主流浏览器</font></div>
+           </div>
+           <div class="panel-footer">
+                <ul>
+                    <li class="item1">
+                        <span class="glyphicon glyphicon-leaf"></span>
+                        &nbsp;
+                        Linux
+                    </li>
+                    <li class="item2">
+                        <span class="badge">浏览&nbsp;&nbsp;0</span>
+                    </li>
+                    <li class="item3">
+                        <span class="badge">评论&nbsp;&nbsp;0</span>
+                    </li>
+                    <a href="#"><button class="btn btn-success btn-md" type="button">More Detail..</button></a>
+                </ul>
+           </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-3">
+    <div class="content-block effect" id="category">
+        <div class="me">
+            <img src="static/images/user.png">
+            <p>Summy Chou</p>
+        </div>
+        <hr/>
+        <div class="latest-articles">
+            <h3>近期文章</h3>
+            <div class="block">
+                <a href="#">在Linux系统中翻墙</a>
+            </div>
+        </div>
+        <hr/>
+        <div class="latest-comments">
+            <h3>近期评论</h3>
+            <div class="block">
+                <a href="#">Summy发表在《在Linux系统中翻墙》</a>
+            </div>
+        </div>
+        <hr/>
+        <div class="category">
+            <h3>分类目录</h3>
+            <div class="block">
+                <a href="#">Linux</a>
+            </div>
+        </div>
+        <hr/>
+    </div>
+</div>
+{% endblock %}
