@@ -1,0 +1,117 @@
+#row2 .col-md-12 .content-block {
+	width: 100%;
+	margin: 40px auto;
+}
+
+#row2 .col-md-12 .content-block .panel-heading {
+	height: 70px;
+	text-align: right;
+	padding-top: 40px;
+}
+
+#row2 .col-md-12 .content-block .panel-body {
+
+}
+
+#row2 .col-md-12 .content-block .panel-body .alert {
+	margin: 0;
+	padding: 2px, auto;
+}
+
+#row2 .col-md-12 .content-block .panel-body blockquote {
+    border-color: #9bcd9b;
+    background-color: #fafafa;
+}
+
+#row2 .col-md-12 .content-block .panel-body blockquote p {
+    font-family: "Times New Roman";
+	font-size: 17px;
+	color: #454545;
+}
+
+#row2 .col-md-12 .content-block .panel-body h1 {
+    margin: 0;
+	padding-top: 20px;
+	padding-bottom: 15px;
+	font-size: 25px;
+	font-weight: bold;
+	color: #454545;
+	text-align: center;
+}
+
+#row2 .col-md-12 .content-block .panel-body h2 {
+	padding-top: 20px;
+	padding-bottom: 15px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #454545;
+}
+
+#row2 .col-md-12 .content-block .panel-body p {
+    margin: 0;
+	line-height: 30px;
+	text-indent: 2em;
+	font-size: 15px;
+	color: #454545;
+}
+
+#row2 .col-md-12 .content-block .panel-body a {
+	font-size: 18px;
+	color: #6b8e23;
+	text-decoration: none;
+}
+
+#row2 .col-md-12 .content-block .panel-body p strong {
+	font-family: "Times New Roman";
+	color: #f08080;
+}
+
+#row2 .col-md-12 .content-block .panel-body img {
+    display: block;
+    margin: 0 auto;
+}
+
+#row2 .col-md-12 .content-block .panel-body pre {
+	background-color: #242424;
+	color: #7ccd7c;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#row2 .col-md-12 .content-block .panel-footer {
+	height: 50px;
+}
+
+#row2 .col-md-12 .content-block .panel-footer ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#row2 .col-md-12 .content-block .panel-footer ul li {
+	display: inline-block;
+	padding-left: 20px;
+	padding-top: 10px;
+}
+
+#row2 .col-md-12 .content-block .panel-footer a {
+	padding-left: 15px;
+	float: right;
+	font-size: 20px;
+	font-weight: bold;
+	color: #454545;
+	text-decoration: none;
+}
+
+#row2 .col-md-12 .effect {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#row2 .col-md-12 .comment-block {
+	width: 100%;
+	margin: 40px auto;
+}
+
+#row2 .col-md-12 .comment-block .ds-thread{
+    padding: 30px;
+}

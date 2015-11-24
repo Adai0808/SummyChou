@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load markdown_deux_tags %}
+
+{% block title %}Summy's Blog{% endblock %}
+
+{% block extracss %}
+<link href="{% static 'css/articles_article.css' %}" rel="stylesheet" />
+<link href="{% static 'css/code.css' %}" rel="stylesheet" />
+{% endblock %}
+
+{% block body %}
+<div class="col-md-12" id="article">
+    <div class="content-block effect">
+        <div class="panel panel-default">
+           <div class="panel-heading">
+                <span class="glyphicon glyphicon-calendar"></span>
+                <font style="font-weight:bold;color:#454545">{{ article.last_update_timestamp }}</font>
+           </div>
+           <div class="panel-body">
+                {{ article.content|markdown:'codehilite' }}
+           </div>
+           <div class="panel-footer">
+                <ul>
+                    <li class="item1">
+                        <span class="glyphicon glyphicon-leaf"></span>
+                        &nbsp;
+                        {{ article.label }}
+                    </li>
+                    <li class="item2">
+                        <span class="badge">浏览&nbsp;&nbsp;0</span>
+                    </li>
+                    <li class="item3">
+                        <span class="badge">评论&nbsp;&nbsp;0</span>
+                    </li>
+                    <a href="/"><button class="btn btn-success btn-md" type="button">Back Home</button></a>
+                </ul>
+           </div>
+        </div>
+    </div>
+    <div class="comment-block effect">
+        <!-- 多说评论框 start -->
+        <div class="ds-thread" data-thread-key="{{ article.id }}" data-title="{{ article.title }}" data-url="/articles/{{ article.id }}"></div>
+        <!-- 多说评论框 end -->
+    </div>
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"summychou"};
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0]
+             || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+{% endblock %}
