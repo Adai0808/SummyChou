@@ -1,0 +1,213 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}Summy's Blog{% endblock %}
+
+{% block extracss %}
+<link href="{% static 'css/usr_share.css' %}" rel="stylesheet" />
+{% endblock %}
+
+{% block body %}
+<div class="col-md-8">
+    <div class="bookcase effect">
+        <div class="row1">
+            <ul>
+                <li class="book1">
+                    <a class="event1" href="javascript:void(0);" onclick="hiden()"><img class="book" src="../static/images/book1.png" width="50" height="70"></a>
+                </li>
+                <li class="book2">
+                    <a class="event2" href="javascript:void(0)"><img class="book" src="../static/images/book2.png" width="50" height="70"></a>
+                </li>
+                <li class="book3">
+                    <a class="event3" href="javascript:void(0)"><img class="book" src="../static/images/book3.png" width="50" height="70"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="row2">
+            <ul>
+                <li class="book4">
+                    <a class="event4" href="javascript:void(0)"><img class="book" src="../static/images/book4.png" width="50" height="70"></a>
+                </li>
+                <li class="book5">
+                    <a class="event5" href="javascript:void(0)"><img class="book" src="../static/images/book5.png" width="50" height="70"></a>
+                </li>
+                <li class="book6">
+                    <a class="event6" href="javascript:void(0)"><img class="book" src="../static/images/book6.png" width="50" height="70"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="row3">
+            <ul>
+                <li class="book7">
+                    <a class="event7" href="javascript:void(0)"><img class="book" src="../static/images/book7.png" width="50" height="70"></a>
+                </li>
+                <li class="book8">
+                    <a class="event8" href="javascript:void(0)"><img class="book" src="../static/images/book8.png" width="50" height="70"></a>
+                </li>
+                <li class="book9">
+                    <a class="event9" href="javascript:void(0)"><img class="book" src="../static/images/book9.png" width="50" height="70"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="row4">
+            <ul>
+                <li class="book10">
+                    <a class="event10" href="javascript:void(0)"><img class="book" src="../static/images/book10.png" width="50" height="70"></a>
+                </li>
+                <li class="book11">
+                    <a class="event11" href="javascript:void(0)"><img class="book" src="../static/images/book11.png" width="50" height="70"></a>
+                </li>
+                <li class="book11">
+                    <a class="event12" href="javascript:void(0)"><img class="book" src="../static/images/book12.png" width="50" height="70"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="detail effect">
+        <div class="cover">
+            <img class="book_cover" src="../static/images/book1.png">
+        </div>
+        <hr/>
+        <p class="book_name"><strong>书名</strong>: Python数据分析基础教程</p>
+        <p class="author"><strong>作者</strong>: Ivan Idris</p>
+        <p class="publisher"><strong>出版社</strong>: 人民邮电出版社</p>
+        <p class="pages"><strong>页数</strong>: 226</p>
+        <p class="price"><strong>定价</strong>: CNY 49.00</p>
+        <hr/>
+        <div class="download">
+            <form method="POST">{% csrf_token %}
+                <input type="submit" class="btn btn-success" value="我要下载"/>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+    $(".event1").click(function(){
+      $(".detail").hide();
+      $(".detail").fadeIn(2000);
+      $(".book_cover").attr('src', "../static/images/book1.png");
+      $(".book_name").html("<strong>书名</strong>: Python数据分析基础教程");
+      $(".author").html("<strong>作者</strong>: Ivan Idris");
+      $(".publisher").html("<strong>出版社</strong>: 人民邮电出版社");
+      $(".pages").html("<strong>页数</strong>: 226");
+      $(".price").html("<strong>定价</strong>: CNY 49.00");
+    });
+    $(".event2").click(function(){
+      $(".detail").hide();
+      $(".detail").fadeIn(2000);
+      $(".book_cover").attr('src', "../static/images/book2.png");
+      $(".book_name").html("<strong>书名</strong>: 利用Python进行数据分析");
+      $(".author").html("<strong>作者</strong>: Wes McKinney");
+      $(".publisher").html("<strong>出版社</strong>: 机械工业出版社");
+      $(".pages").html("<strong>页数</strong>: 464");
+      $(".price").html("<strong>定价</strong>: CNY 89.00");
+    });
+    $(".event3").click(function(){
+      $(".detail").hide();
+      $(".detail").fadeIn(2000);
+      $(".book_cover").attr('src', "../static/images/book3.png");
+      $(".book_name").html("<strong>书名</strong>: Python Cookbook");
+      $(".author").html("<strong>作者</strong>: Alex Martelli等");
+      $(".publisher").html("<strong>出版社</strong>: 人民邮电出版社");
+      $(".pages").html("<strong>页数</strong>: 756");
+      $(".price").html("<strong>定价</strong>: CNY 99.00");
+    });
+
+    $(".event4").click(function(){
+      $(".detail").hide();
+      $(".detail").fadeIn(2000);
+      $(".book_cover").attr('src', "../static/images/book4.png");
+      $(".book_name").html("<strong>书名</strong>: Python网络编程攻略");
+      $(".author").html("<strong>作者</strong>: Dr.M.O. Faruque Sarker ");
+      $(".publisher").html("<strong>出版社</strong>: 人民邮电出版社");
+      $(".pages").html("<strong>页数</strong>: 188");
+      $(".price").html("<strong>定价</strong>: CNY 45.00");
+    });
+    $(".event5").click(function(){
+      $(".detail").hide();
+      $(".detail").fadeIn(2000);
+      $(".book_cover").attr('src', "../static/images/book5.png");
+      $(".book_name").html("<strong>书名</strong>: Python编程实践");
+      $(".author").html("<strong>作者</strong>: Mark Summerfield");
+      $(".publisher").html("<strong>出版社</strong>: 机械工业出版社");
+      $(".pages").html("<strong>页数</strong>: 252");
+      $(".price").html("<strong>定价</strong>: CNY 69.00");
+    });
+    $(".event6").click(function(){
+      $(".detail").hide();
+      $(".detail").fadeIn(2000);
+      $(".book_cover").attr('src', "../static/images/book6.png");
+      $(".book_name").html("<strong>书名</strong>: Flask Web开发");
+      $(".author").html("<strong>作者</strong>: Miguel Grinberg");
+      $(".publisher").html("<strong>出版社</strong>: 人民邮电出版社");
+      $(".pages").html("<strong>页数</strong>: 224");
+      $(".price").html("<strong>定价</strong>: CNY 59.00");
+    });
+
+    $(".event7").click(function(){
+      $(".detail").hide();
+      $(".detail").fadeIn(2000);
+      $(".book_cover").attr('src', "../static/images/book7.png");
+      $(".book_name").html("<strong>书名</strong>: Python黑帽子");
+      $(".author").html("<strong>作者</strong>: Justin Seitz");
+      $(".publisher").html("<strong>出版社</strong>: 电子工业出版社");
+      $(".pages").html("<strong>页数</strong>: 205");
+      $(".price").html("<strong>定价</strong>: CNY 55.00");
+    });
+    $(".event8").click(function(){
+      $(".detail").hide();
+      $(".detail").fadeIn(2000);
+      $(".book_cover").attr('src', "../static/images/book8.png");
+      $(".book_name").html("<strong>书名</strong>: 笨办法学Python");
+      $(".author").html("<strong>作者</strong>: Zed A. Shaw");
+      $(".publisher").html("<strong>出版社</strong>: 人民邮电出版社");
+      $(".pages").html("<strong>页数</strong>: 264");
+      $(".price").html("<strong>定价</strong>: CNY 49.00");
+    });
+    $(".event9").click(function(){
+      $(".detail").hide();
+      $(".detail").fadeIn(2000);
+      $(".book_cover").attr('src', "../static/images/book9.png");
+      $(".book_name").html("<strong>书名</strong>: Python游戏编程入门");
+      $(".author").html("<strong>作者</strong>: Jonathan S.Harbour");
+      $(".publisher").html("<strong>出版社</strong>: 人民邮电出版社");
+      $(".pages").html("<strong>页数</strong>: 292");
+      $(".price").html("<strong>定价</strong>: CNY 41.00");
+    });
+
+    $(".event10").click(function(){
+      $(".detail").hide();
+      $(".detail").fadeIn(2000);
+      $(".book_cover").attr('src', "../static/images/book10.png");
+      $(".book_name").html("<strong>书名</strong>: Python数据可视化编程");
+      $(".author").html("<strong>作者</strong>: Igor Milovanovic ");
+      $(".publisher").html("<strong>出版社</strong>: 人民邮电出版社");
+      $(".pages").html("<strong>页数</strong>: 242");
+      $(".price").html("<strong>定价</strong>: CNY 49.00");
+    });
+    $(".event11").click(function(){
+      $(".detail").hide();
+      $(".detail").fadeIn(2000);
+      $(".book_cover").attr('src', "../static/images/book11.png");
+      $(".book_name").html("<strong>书名</strong>: Python计算机视觉编程");
+      $(".author").html("<strong>作者</strong>: Jan Erik Solem");
+      $(".publisher").html("<strong>出版社</strong>: 人民邮电出版社");
+      $(".pages").html("<strong>页数</strong> 284");
+      $(".price").html("<strong>定价</strong> CNY 69.00");
+    });
+    $(".event12").click(function(){
+      $(".detail").hide();
+      $(".detail").fadeIn(2000);
+      $(".book_cover").attr('src', "../static/images/book12.png");
+      $(".book_name").html("<strong>书名</strong>: Python高手之路");
+      $(".author").html("<strong>作者</strong>: Julien Danjou");
+      $(".publisher").html("<strong>出版社</strong>: 人民邮电出版社");
+      $(".pages").html("<strong>页数</strong>: 202");
+      $(".price").html("<strong>定价</strong>: CNY 41.00");
+    });
+})
+</script>
+{% endblock %}
